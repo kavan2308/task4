@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Dashboard</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('back.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        #loginBox {
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            opacity: 0.9;
+        }
+
+        #logo {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        #loginBtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #forgotPassword {
+            color: #007BFF;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginBox">
+        <div id="logo">
+            <img src="ima.jpeg" alt="Logo" width="100">
+        </div>
+        <input type="text" id="username" placeholder="Enter email">
+        <br>
+        <input type="password" id="password" placeholder="Enter password">
+        <br>
+        <button id="loginBtn">Login</button>
+        <br>
+        <a href="mailto:support@smartserv.io" id="forgotPassword">Forgot your password?</a>
+    </div>
+
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", function () {
+            validateLogin();
+        });
+
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(username)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            var passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@]*$/;
+            if (!passwordRegex.test(password)) {
+                alert("Password must contain an uppercase letter, a number, and no special characters other than @.");
+                return;
+            }
+
+   
+            if (password === "SmartServTest@123") {
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>

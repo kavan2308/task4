@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        #companyMetrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .metricBox {
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .histograms {
+            display: flex;
+            gap: 20px;
+        }
+
+        .histogram {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .bar-label {
+            width: 120px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .bar {
+            height: 20px;
+            background-color: #007BFF;
+            margin: 0;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="companyMetrics">
+        <div class="metricBox">
+            <div style="font-size: 36px;">$406,411.25</div>
+            <div style="font-size: 18px;">Total Revenue</div>
+        </div>
+
+        <div class="metricBox">
+            <div style="font-size: 24px;">620</div>
+            <div style="font-size: 18px;">Total Job Average</div>
+        </div>
+
+        <div class="metricBox">
+            <div style="font-size: 24px;">655</div>
+            <div style="font-size: 18px;">Tickets Created</div>
+        </div>
+
+        <div class="metricBox">
+            <div style="font-size: 24px;">635</div>
+            <div style="font-size: 18px;">Tickets Scheduled</div>
+        </div>
+
+        <div class="metricBox">
+            <div style="font-size: 36px;">$110,448.8</div>
+            <div style="font-size: 18px;">Outstanding Amount</div>
+        </div>
+
+        <div class="metricBox">
+            <div style="font-size: 24px;">105</div>
+            <div style="font-size: 18px;">Memberships Sold</div>
+        </div>
+
+        <div class="metricBox">
+            <div style="font-size: 24px;">436</div>
+            <div style="font-size: 18px;">Jobs Completed</div>
+        </div>
+
+        <div class="metricBox">
+            <div style="font-size: 24px;">65</div>
+            <div style="font-size: 18px;">Total Canceled</div>
+        </div>
+    </div>
+    <hr>
+    <h1>Revenue By Job Locations</h1>
+<div id="histograms">
+    <div id="histograms">
+     <div class="histogram">
+        <div class="bar-label">Everett</div>
+        <div class="bar" style="width: 300px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Seattle</div>
+        <div class="bar" style="width: 400px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Lynnwood</div>
+        <div class="bar" style="width: 250px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Edmonds</div>
+        <div class="bar" style="width: 150px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Bothell</div>
+        <div class="bar" style="width: 350px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Mukilteo</div>
+        <div class="bar" style="width: 280px;"></div>
+        
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>Revenue for November 2019</h3>
+</div>
+
+<hr>
+
+<h1>Revenue By Job Type</h1>
+<div class="historams"> 
+    <div class="histogram">
+        <div class="bar-label">Service Plumbing</div>
+        <div class="bar" style="width: 550px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Material State</div>
+        <div class="bar" style="width: 150px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Bid Work Plumbing</div>
+        <div class="bar" style="width: 200px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Service HVAC</div>
+        <div class="bar" style="width: 600px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Maintenance</div>
+        <div class="bar" style="width: 300px;"></div>
+    </div>
+
+    <div class="histogram">
+        <div class="bar-label">Bid Work HVAC</div>
+        <div class="bar" style="width: 500px;"></div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>Revenue for November 2019</h3>
+</div>
+
+</body>
+</html>
